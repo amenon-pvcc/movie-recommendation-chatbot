@@ -53,6 +53,20 @@ class Chatbot:
         genre = self.get_user_genre()
         self.recommend_movie(genre)
 
+import csv
+
+class MovieDatabase:
+    def __init__(self):
+        self.movies = self.load_movies()
+
+    def load_movies(self):
+        movies = []
+        with open("movies.csv", mode="r") as file:
+            csv_reader = csv.DictReader(file)
+            for row in csv_reader:
+                movies.append(Movie(row["title"], row["genre"], float(row["rating"])))
+        return movies
+
 # Main code to initialize and run the chatbot program
 if __name__ == "__main__":
     movie_db = MovieDatabase()  # Create movie database instance
