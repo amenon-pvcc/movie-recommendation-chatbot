@@ -5,5 +5,5 @@ This project is a Python-based chatbot that recommends movies based on the genre
 
 ## Project Structure
 
-- **assignmentdesign.py** : The main Python file containing the code for the movie recommendation chatbot.
+- **moviechatbot.py** : The main Python file containing the code for the movie recommendation chatbot.
 - **movies.csv** : A CSV file listing movies by title, genre and rating.
